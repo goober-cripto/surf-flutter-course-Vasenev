@@ -1,6 +1,6 @@
 # places
 
-A new Flutter project.
+Приложение на Flutter о путешествиях
 
 ## Getting Started
 
