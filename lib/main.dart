@@ -27,7 +27,7 @@ class MyApp extends StatelessWidget {
         // closer together (more dense) than on mobile platforms.
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: MyHomePage(title: 'Flutter Demo Home Page'),
+      home: MyFirstWidget1(),
     );
   }
 }
@@ -116,3 +116,47 @@ class _MyHomePageState extends State<MyHomePage> {
     );
   }
 }
+
+class MyFirstWidged extends StatelessWidget {
+  int cou = 0;
+  @override
+  Widget build(
+    BuildContext context,
+  ) {
+    cou++;
+    print(cou);
+    return Container(
+      child: Center(
+        child: Text('Hello!'),
+      ),
+    );
+  }
+}
+/*
+MyFirstWidged - при выполнении Hot Reload не накапливает значение, оно постоянно равно 1, это значит что 
+StatelessWidget без сохранения состояния
+*/
+
+class MyFirstWidget1 extends StatefulWidget {
+  @override
+  _MyFirstWidget1State createState() => _MyFirstWidget1State();
+}
+
+class _MyFirstWidget1State extends State<MyFirstWidget1> {
+  int i = 0;
+  @override
+  Widget build(BuildContext context) {
+    i++;
+    print(i);
+    return Container(
+      child: Center(
+        child: Text('Hello!'),
+      ),
+    );
+  }
+}
+
+/*
+MyFirstWidged1 - при выполнении Hot Reload  накапливает значение, оно постоянно увеличивается, это значит что 
+StatefulWidget является динамическим с сохранением сосотяния 
+*/
