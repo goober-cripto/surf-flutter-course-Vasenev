@@ -11,13 +11,8 @@ class MyFirstWidged extends StatelessWidget {
   Widget build(
     BuildContext context,
   ) {
-    return context_runtimeType(context);
-    /*Scaffold(
-      appBar: AppBar(
-        title: Text('Home'),
-        centerTitle: true,
-      ),
-    );*/
+    print(context.runtimeType);
+    return Container();
   }
 }
 
@@ -29,25 +24,17 @@ class MyFirstWidget1 extends StatefulWidget {
 class _MyFirstWidget1State extends State<MyFirstWidget1> {
   @override
   Widget build(BuildContext context) {
-    return context_runtimeType(context);
-    /*Scaffold(
-      appBar: AppBar(
-        title: Text('Home'),
-        centerTitle: true,
-      ),
-    );*/
+    print(context.runtimeType);
+    return Container();
   }
-}
-
-context_runtimeType(e) {
-  print(e.runtimeType);
 }
 
 class App extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: MyFirstWidged(),
+      title: 'Заголовок',
+      home: MyFirstWidget1(),
     );
   }
 }
