@@ -7,11 +7,15 @@ void main() {
 }
 
 class MyFirstWidged extends StatelessWidget {
+  ret_context() {
+    return (context.runtimeType);
+  }
+
   @override
   Widget build(
     BuildContext context,
   ) {
-    print(context.runtimeType);
+    print(ret_context());
     return Container();
   }
 }
@@ -22,9 +26,13 @@ class MyFirstWidget1 extends StatefulWidget {
 }
 
 class _MyFirstWidget1State extends State<MyFirstWidget1> {
+  ret_context1() {
+    return (context.runtimeType);
+  }
+
   @override
   Widget build(BuildContext context) {
-    print(context.runtimeType);
+    print(ret_context1());
     return Container();
   }
 }
@@ -34,14 +42,10 @@ class App extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Заголовок',
-      home: MyFirstWidget1(),
+      home: MyFirstWidged(),
     );
   }
 }
-/*
-при вызове MyFirstWidged() вернуло ошибку потому что контейнер не может быть равен null 
-так как позиция в дереве не может быть равной null
-*/
 
 /*
 class App extends StatefulWidget {
