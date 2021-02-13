@@ -17,65 +17,17 @@ class _SightListScreenState extends State<SightListScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            Text(
-              'Число нажатий',
-              style: Theme.of(context).textTheme.headline4,
-            ),
-            Text(
-              '$_count',
-              style: Theme.of(context).textTheme.headline3,
-            )
-          ],
-        ),
-      ),
-      drawer: Container(
-        width: 270,
-        color: Colors.green,
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.stretch,
-          children: [
-            DrawerHeader(
-              child: Text('DrawerHeader'),
-              decoration: BoxDecoration(color: Colors.blue),
-            ),
-            ListTile(
-              title: Text("Title 1"),
-            ),
-            ListTile(
-              title: Text("Title 2"),
-            ),
-          ],
-        ),
-      ),
       appBar: AppBar(
-        title: Text('Travel'),
-        actions: [
-          IconButton(icon: Icon(Icons.alarm), onPressed: _incrementCounter)
-        ],
-      ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: _incrementCounter,
-        child: Icon(Icons.add),
-      ),
-      bottomNavigationBar: BottomNavigationBar(
-        items: [
-          BottomNavigationBarItem(
-            icon: Icon(Icons.home),
-            title: Text('Главная'),
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.mail),
-            title: Text('Сообщения'),
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.person),
-            title: Text('Профиль'),
-          ),
-        ],
+        title: Text('Список\nинтересных мест',
+            textAlign: TextAlign.left,
+            style: TextStyle(
+                color: Colors.black,
+                fontSize: 32,
+                fontWeight: FontWeight.w700,
+                fontFamily: 'Roboto-Regular')),
+        backgroundColor: Colors.white,
+        shadowColor: Colors.white,
+        toolbarHeight: 100,
       ),
     );
   }
