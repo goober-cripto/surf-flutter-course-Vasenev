@@ -1,4 +1,7 @@
+import 'dart:ui';
 import 'package:flutter/material.dart';
+
+import 'package:places/ul/screen/text_styles.dart';
 
 class SightListScreen extends StatefulWidget {
   @override
@@ -19,40 +22,20 @@ class _SightListScreenState extends State<SightListScreen> {
     return Scaffold(
       appBar: AppBar(
         title: RichText(
-          text: TextSpan(
-              text: "C",
-              style: TextStyle(
-                color: Colors.green,
-                fontSize: 32,
-                fontWeight: FontWeight.w700,
-                fontFamily: 'Roboto-Bold',
-              ),
-              children: [
-                TextSpan(
-                  text: "писок\n",
-                  style: TextStyle(
-                      color: Colors.black,
-                      fontSize: 32,
-                      fontWeight: FontWeight.w700,
-                      fontFamily: 'Roboto-Bold'),
-                ),
-                TextSpan(
-                  text: "и",
-                  style: TextStyle(
-                      color: Colors.yellow,
-                      fontSize: 32,
-                      fontWeight: FontWeight.w700,
-                      fontFamily: 'Roboto-Bold'),
-                ),
-                TextSpan(
-                  text: "нтересных мест",
-                  style: TextStyle(
-                      color: Colors.black,
-                      fontSize: 32,
-                      fontWeight: FontWeight.w700,
-                      fontFamily: 'Roboto-Bold'),
-                ),
-              ]),
+          text: TextSpan(text: "C", style: text_Roboto_Bold_green, children: [
+            TextSpan(
+              text: "писок\n",
+              style: text_Roboto_Bold,
+            ),
+            TextSpan(
+              text: "и",
+              style: text_Roboto_Bold_yellow,
+            ),
+            TextSpan(
+              text: "нтересных мест",
+              style: text_Roboto_Bold,
+            ),
+          ]),
         ),
         backgroundColor: Colors.white,
         shadowColor: Colors.white,
