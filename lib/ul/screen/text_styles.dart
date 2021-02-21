@@ -13,4 +13,7 @@ TextStyle _text = TextStyle(
     text_Roboto_Bold_green =
         _text.copyWith(fontFamily: 'Roboto', color: Colors.green),
     text_Roboto_Bold_yellow =
-        _text.copyWith(fontFamily: 'Roboto', color: Colors.yellow);
+        _text.copyWith(fontFamily: 'Roboto', color: Colors.yellow),
+
+//Regular
+    text_Roboto_Regular = _text.copyWith(fontFamily: 'Roboto-Regular');
