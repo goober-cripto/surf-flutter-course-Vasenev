@@ -1,4 +1,9 @@
+import 'dart:ui';
 import 'package:flutter/material.dart';
+
+import 'package:places/ul/screen/text_styles.dart';
+
+import '../../mocks.dart';
 
 class SightListScreen extends StatefulWidget {
   @override
@@ -17,66 +22,197 @@ class _SightListScreenState extends State<SightListScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            Text(
-              'Число нажатий',
-              style: Theme.of(context).textTheme.headline4,
-            ),
-            Text(
-              '$_count',
-              style: Theme.of(context).textTheme.headline3,
-            )
-          ],
+        appBar: AppBar(
+          title: RichText(
+            text: TextSpan(text: "C", style: text_Roboto_Bold_green, children: [
+              TextSpan(
+                text: "писок\n",
+                style: text_Roboto_Bold,
+              ),
+              TextSpan(
+                text: "и",
+                style: text_Roboto_Bold_yellow,
+              ),
+              TextSpan(
+                text: "нтересных мест",
+                style: text_Roboto_Bold,
+              ),
+            ]),
+          ),
+          backgroundColor: Colors.white,
+          shadowColor: Colors.white,
+          toolbarHeight: 100,
         ),
-      ),
-      drawer: Container(
-        width: 270,
-        color: Colors.green,
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.stretch,
-          children: [
-            DrawerHeader(
-              child: Text('DrawerHeader'),
-              decoration: BoxDecoration(color: Colors.blue),
-            ),
-            ListTile(
-              title: Text("Title 1"),
-            ),
-            ListTile(
-              title: Text("Title 2"),
-            ),
-          ],
-        ),
-      ),
-      appBar: AppBar(
-        title: Text('Travel'),
-        actions: [
-          IconButton(icon: Icon(Icons.alarm), onPressed: _incrementCounter)
-        ],
-      ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: _incrementCounter,
-        child: Icon(Icons.add),
-      ),
-      bottomNavigationBar: BottomNavigationBar(
-        items: [
-          BottomNavigationBarItem(
-            icon: Icon(Icons.home),
-            title: Text('Главная'),
+        body: Container(
+          margin: EdgeInsets.only(top: 24, left: 16, right: 16),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.stretch,
+            children: [
+              /*1 карточка */
+              Container(
+                margin: EdgeInsets.only(bottom: 11),
+                constraints: BoxConstraints(maxHeight: 200),
+                height: 200,
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.stretch,
+                  children: [
+                    Expanded(
+                      child: Container(
+                        decoration: BoxDecoration(
+                            color: Colors.blue,
+                            borderRadius: BorderRadius.only(
+                                topLeft: Radius.circular(12),
+                                topRight: Radius.circular(12))),
+                        child: Row(
+                          crossAxisAlignment: CrossAxisAlignment.stretch,
+                          children: [
+                            Expanded(
+                              child: Container(
+                                padding: EdgeInsets.all(16),
+                                child: Text(
+                                  '${mocks[0].type}',
+                                  textAlign: TextAlign.start,
+                                  style: text_small_Roboto_16_grey_W400,
+                                ),
+                              ),
+                              flex: 1,
+                            ),
+                            Expanded(
+                              child: Container(
+                                child: Container(
+                                  padding: EdgeInsets.only(top: 19, right: 18),
+                                  child: Text(
+                                    'icon',
+                                    textAlign: TextAlign.end,
+                                  ),
+                                ),
+                              ),
+                              flex: 1,
+                            )
+                          ],
+                        ),
+                      ),
+                      flex: 1,
+                    ),
+                    Expanded(
+                      child: Container(
+                        decoration: BoxDecoration(
+                            color: Colors.grey[100],
+                            borderRadius: BorderRadius.only(
+                                bottomLeft: Radius.circular(12),
+                                bottomRight: Radius.circular(12))),
+                        child: Container(
+                          padding:
+                              EdgeInsets.only(left: 16, right: 16, top: 16),
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.stretch,
+                            children: [
+                              Container(
+                                margin: EdgeInsets.only(bottom: 2),
+                                child: Text(
+                                  '${mocks[0].name}',
+                                  style: text_Roboto_card,
+                                ),
+                              ),
+                              Container(
+                                child: Text(
+                                  'закрыто до 9:00',
+                                  style: text_small_Roboto_18_grey700,
+                                ),
+                              )
+                            ],
+                          ),
+                        ),
+                      ),
+                      flex: 1,
+                    )
+                  ],
+                ),
+              ),
+              /*2 карточка */
+              Container(
+                constraints: BoxConstraints(maxHeight: 200),
+                height: 200,
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.stretch,
+                  children: [
+                    Expanded(
+                      child: Container(
+                        child: Row(
+                          crossAxisAlignment: CrossAxisAlignment.stretch,
+                          children: [
+                            Expanded(
+                              child: Container(
+                                child: Container(
+                                  padding: EdgeInsets.all(16),
+                                  child: Text(
+                                    '${mocks[1].type}',
+                                    textAlign: TextAlign.start,
+                                    style: text_small_Roboto_16_grey_W400,
+                                  ),
+                                ),
+                              ),
+                              flex: 1,
+                            ),
+                            Expanded(
+                              child: Container(
+                                child: Container(
+                                  padding: EdgeInsets.only(top: 19, right: 18),
+                                  child: Text(
+                                    'icon',
+                                    textAlign: TextAlign.end,
+                                  ),
+                                ),
+                              ),
+                              flex: 1,
+                            )
+                          ],
+                        ),
+                        decoration: BoxDecoration(
+                            color: Colors.blue,
+                            borderRadius: BorderRadius.only(
+                                topLeft: Radius.circular(12),
+                                topRight: Radius.circular(12))),
+                      ),
+                      flex: 1,
+                    ),
+                    Expanded(
+                      child: Container(
+                        decoration: BoxDecoration(
+                            color: Colors.grey[100],
+                            borderRadius: BorderRadius.only(
+                                bottomLeft: Radius.circular(12),
+                                bottomRight: Radius.circular(12))),
+                        child: Container(
+                          padding:
+                              EdgeInsets.only(left: 16, right: 16, top: 16),
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.stretch,
+                            children: [
+                              Container(
+                                margin: EdgeInsets.only(bottom: 2),
+                                child: Text(
+                                  '${mocks[1].name}',
+                                  style: text_Roboto_card,
+                                ),
+                              ),
+                              Container(
+                                child: Text(
+                                  'закрыто до 9:00',
+                                  style: text_small_Roboto_18_grey700,
+                                ),
+                              )
+                            ],
+                          ),
+                        ),
+                      ),
+                      flex: 1,
+                    )
+                  ],
+                ),
+              ),
+            ],
           ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.mail),
-            title: Text('Сообщения'),
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.person),
-            title: Text('Профиль'),
-          ),
-        ],
-      ),
-    );
+        ));
   }
 }

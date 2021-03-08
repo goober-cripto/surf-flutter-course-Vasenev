@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:places/ul/screen/sight_card.dart';
 import 'package:places/ul/screen/sight_list_screen.dart';
 
 void main() {
@@ -49,7 +50,7 @@ class App extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Travel',
-      home: SightListScreen(),
+      home: SightListScreen(), //SightListScreen(),SightCard()
     );
   }
 }
