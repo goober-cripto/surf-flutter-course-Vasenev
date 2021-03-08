@@ -23,12 +23,10 @@ class SightCard extends StatelessWidget {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.stretch,
                   children: [
-                    Container(
-                      child: Text(
-                        '${mocks[0]["name"]}',
-                        style: text_Roboto_Bold_24,
-                        textAlign: TextAlign.left,
-                      ),
+                    Text(
+                      '${mocks[0].name}',
+                      style: text_Roboto_Bold_24,
+                      textAlign: TextAlign.left,
                     ),
                     Container(
                       margin: EdgeInsets.only(top: 2),
@@ -36,7 +34,7 @@ class SightCard extends StatelessWidget {
                         children: [
                           Container(
                             child: Text(
-                              '${mocks[0]["type"]}',
+                              '${mocks[0].type}',
                               textAlign: TextAlign.left,
                               style: text_small_Roboto_Bold_18,
                             ),
@@ -54,7 +52,7 @@ class SightCard extends StatelessWidget {
                     Container(
                       margin: EdgeInsets.only(top: 24),
                       child: Text(
-                        '${mocks[0]["details"]}',
+                        '${mocks[0].details}',
                         style: text_small_Roboto_18_grey800,
                       ),
                     ),

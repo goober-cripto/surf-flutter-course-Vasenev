@@ -58,44 +58,39 @@ class _SightListScreenState extends State<SightListScreen> {
                   children: [
                     Expanded(
                       child: Container(
-                        child: Container(
-                          child: Row(
-                            crossAxisAlignment: CrossAxisAlignment.stretch,
-                            children: [
-                              Expanded(
-                                child: Container(
-                                  child: Container(
-                                    padding: EdgeInsets.all(16),
-                                    child: Text(
-                                      '${mocks[0]['type']}',
-                                      textAlign: TextAlign.start,
-                                      style: text_small_Roboto_16_grey_W400,
-                                    ),
-                                  ),
-                                ),
-                                flex: 1,
-                              ),
-                              Expanded(
-                                child: Container(
-                                  child: Container(
-                                    padding:
-                                        EdgeInsets.only(top: 19, right: 18),
-                                    child: Text(
-                                      'icon',
-                                      textAlign: TextAlign.end,
-                                    ),
-                                  ),
-                                ),
-                                flex: 1,
-                              )
-                            ],
-                          ),
-                        ),
                         decoration: BoxDecoration(
                             color: Colors.blue,
                             borderRadius: BorderRadius.only(
                                 topLeft: Radius.circular(12),
                                 topRight: Radius.circular(12))),
+                        child: Row(
+                          crossAxisAlignment: CrossAxisAlignment.stretch,
+                          children: [
+                            Expanded(
+                              child: Container(
+                                padding: EdgeInsets.all(16),
+                                child: Text(
+                                  '${mocks[0].type}',
+                                  textAlign: TextAlign.start,
+                                  style: text_small_Roboto_16_grey_W400,
+                                ),
+                              ),
+                              flex: 1,
+                            ),
+                            Expanded(
+                              child: Container(
+                                child: Container(
+                                  padding: EdgeInsets.only(top: 19, right: 18),
+                                  child: Text(
+                                    'icon',
+                                    textAlign: TextAlign.end,
+                                  ),
+                                ),
+                              ),
+                              flex: 1,
+                            )
+                          ],
+                        ),
                       ),
                       flex: 1,
                     ),
@@ -115,7 +110,7 @@ class _SightListScreenState extends State<SightListScreen> {
                               Container(
                                 margin: EdgeInsets.only(bottom: 2),
                                 child: Text(
-                                  '${mocks[0]['name']}',
+                                  '${mocks[0].name}',
                                   style: text_Roboto_card,
                                 ),
                               ),
@@ -143,38 +138,35 @@ class _SightListScreenState extends State<SightListScreen> {
                   children: [
                     Expanded(
                       child: Container(
-                        child: Container(
-                          child: Row(
-                            crossAxisAlignment: CrossAxisAlignment.stretch,
-                            children: [
-                              Expanded(
+                        child: Row(
+                          crossAxisAlignment: CrossAxisAlignment.stretch,
+                          children: [
+                            Expanded(
+                              child: Container(
                                 child: Container(
-                                  child: Container(
-                                    padding: EdgeInsets.all(16),
-                                    child: Text(
-                                      '${mocks[1]['type']}',
-                                      textAlign: TextAlign.start,
-                                      style: text_small_Roboto_16_grey_W400,
-                                    ),
+                                  padding: EdgeInsets.all(16),
+                                  child: Text(
+                                    '${mocks[1].type}',
+                                    textAlign: TextAlign.start,
+                                    style: text_small_Roboto_16_grey_W400,
                                   ),
                                 ),
-                                flex: 1,
                               ),
-                              Expanded(
+                              flex: 1,
+                            ),
+                            Expanded(
+                              child: Container(
                                 child: Container(
-                                  child: Container(
-                                    padding:
-                                        EdgeInsets.only(top: 19, right: 18),
-                                    child: Text(
-                                      'icon',
-                                      textAlign: TextAlign.end,
-                                    ),
+                                  padding: EdgeInsets.only(top: 19, right: 18),
+                                  child: Text(
+                                    'icon',
+                                    textAlign: TextAlign.end,
                                   ),
                                 ),
-                                flex: 1,
-                              )
-                            ],
-                          ),
+                              ),
+                              flex: 1,
+                            )
+                          ],
                         ),
                         decoration: BoxDecoration(
                             color: Colors.blue,
@@ -200,7 +192,7 @@ class _SightListScreenState extends State<SightListScreen> {
                               Container(
                                 margin: EdgeInsets.only(bottom: 2),
                                 child: Text(
-                                  '${mocks[1]['name']}',
+                                  '${mocks[1].name}',
                                   style: text_Roboto_card,
                                 ),
                               ),

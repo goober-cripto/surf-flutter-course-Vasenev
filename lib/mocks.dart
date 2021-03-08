@@ -1,3 +1,3 @@
 import 'package:places/domain/sight.dart';
 
-final List mocks = [Content_1, Content_2];
+final List<Sight> mocks = [sight1, sight2];
